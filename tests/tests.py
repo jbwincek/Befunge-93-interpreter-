@@ -101,9 +101,7 @@ class BefungeInterpreterTests(unittest.TestCase):
 
     def test_fetch_character(self):
         self.assert_correct_output("fetch_character_test.bf")
-        #self.assert_correct_output("fetch_character_hard_test.bf")
-        #    Not sure if the above test is failing because of a test coding issue, 
-        #    or a bug in the interpreter. 
+        self.assert_correct_output("fetch_character_hard_test.bf") 
 
     def test_store_character(self):
         self.assert_correct_output("store_character_test.bf")

@@ -479,11 +479,11 @@ def initilize_funge_space(input_string):
     input_lines = input_string.splitlines()
     file_height = len(input_lines)
     if file_height > bounds[1]:
-        bounds = (bounds[0], file_height)
+        bounds = (bounds[0], file_height-1)
     for y, line in enumerate(input_lines):
         line_length = len(line)
         if line_length > bounds[0]:
-            bounds = (line_length, bounds[1])
+            bounds = (line_length-1, bounds[1])
         for x, letter in enumerate(line):
             funge[(x,y)] = letter
 
@@ -624,3 +624,4 @@ def run():
 
 if __name__ == '__main__':
     run()
+    print('')
